@@ -20,6 +20,7 @@ func (t ThirdChannelType) String() string {
 const (
 	XIAOMI ThirdChannelType = "xiaomi"
 	HUAWEI ThirdChannelType = "huawei"
+	HONOR  ThirdChannelType = "honor"
 	MEIZU  ThirdChannelType = "meizu"
 	OPPO   ThirdChannelType = "oppo"
 	VIVO   ThirdChannelType = "vivo"
@@ -46,6 +47,7 @@ type ThirdPartyOptions struct {
 	BigPicPath            string      `json:"big_pic_path,omitempty"`           //厂商big_pic_path, 为了适配厂商的消息大图片样式,目前支持小米/oppo两个厂商
 	OnlyUseVendorStyle    bool        `json:"only_use_vendor_style,omitempty"`  //是否是否使用自身通道设置样式
 	CallbackId            string      `json:"callback_id,omitempty"`            // vivo厂商通道回调ID
+	NotifyLevel           int         `json:"notify_level,omitempty"`           // OPPO通知栏消息提醒等级
 }
 
 type ThirdPartyChannel map[string]ThirdPartyOptions
