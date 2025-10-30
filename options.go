@@ -48,6 +48,7 @@ type ThirdPartyOptions struct {
 	OnlyUseVendorStyle    bool        `json:"only_use_vendor_style,omitempty"`  //是否是否使用自身通道设置样式
 	CallbackId            string      `json:"callback_id,omitempty"`            // vivo厂商通道回调ID
 	NotifyLevel           int         `json:"notify_level,omitempty"`           // OPPO通知栏消息提醒等级
+	AddBadge              bool        `json:"add_badge"`                        //目前支持vivo厂商。该字段透传给vivo厂商通道，需要向厂商申请权限，设置后，角标自动加1
 }
 
 type ThirdPartyChannel map[string]ThirdPartyOptions
